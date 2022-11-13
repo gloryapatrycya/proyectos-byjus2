@@ -1,0 +1,68 @@
+/* 
+    Se construye otra clase ahora para el piso
+    Esto es hecho por el alumnito
+*/
+class Ground {
+    constructor(x, y, width, height){
+        var options = {
+            isStatic: true
+        }
+        this.body = Bodies.rectangle(x, y, width, height, options);
+        this.width = width;
+        this.height = height;
+        World.add(world,this.body);
+    }
+    display() 
+    {
+        var pos = this.body.position;
+        rectMode(CENTER);
+        fill(180);
+        rect(pos.x, pos.y, this.width, this.height);
+    }
+}
+
+/*
+class Ground {
+    constructor(x,y,width,height) 
+    {
+        var options = {
+            isStatic: true
+        }
+        
+        this.body = Bodies.rectangle(x, y,width,height,options);
+        this.width = width;
+        this.height = height;
+        World.add(world, this.body);
+    }
+
+    display()
+    {
+        var pos = this.body.position;
+        rectMode(CENTER);
+        fill(255);
+        rect(pos.x, pos.y, this.width, this,height);
+    }
+}
+
+
+
+class Ground {
+    constructor(x,y,width,height){
+        var options = {
+            isStatic: true
+        }
+        this.body = Bodies.rectangle(x, y, width, height, options);
+        this.width = width;
+        this.height = height;
+        World.add(world,this.body);
+    }
+    display() {
+        var pos = this.body.position;
+        rectMode(CENTER);
+        fill(255);
+        rect(pos.x, pos.y, this.width, this.height);
+    }
+}
+
+
+*/
